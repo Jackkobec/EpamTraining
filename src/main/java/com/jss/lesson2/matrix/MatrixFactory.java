@@ -1,8 +1,7 @@
-package com.jss.lesson2.metrix;
+package com.jss.lesson2.matrix;
 
 import com.jss.exceptions.IncorrectMatrixException;
 
-import java.util.Arrays;
 import java.util.Random;
 
 /**
