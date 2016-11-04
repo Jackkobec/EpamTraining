@@ -1,9 +1,7 @@
-package com.jss.lesson2.matrix;
+package com.jss.lessons.lesson2.matrix;
 
 
 import com.jss.exceptions.IncorrectMatrixException;
-
-import static com.jss.lesson2.matrix.Summator.sum;
 
 
 /**
@@ -23,7 +21,7 @@ public class MatrixTest {
         System.out.println(Matrix.toString(mx2.getA()));
 
         System.out.println("Sum of the m1 and m2: ");
-        System.out.println(Matrix.toString(sum(mx1, mx2).getA()));
+        System.out.println(Matrix.toString(Summator.sum(mx1, mx2).getA()));
 
 
     }

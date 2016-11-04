@@ -1,4 +1,4 @@
-package com.jss.lesson2.matrix;
+package com.jss.lessons.lesson2.matrix;
 
 
 import com.jss.exceptions.IncorrectMatrixException;

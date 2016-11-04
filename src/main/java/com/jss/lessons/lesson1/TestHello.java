@@ -1,4 +1,4 @@
-package com.jss.lesson1;
+package com.jss.lessons.lesson1;
 
 
 /**

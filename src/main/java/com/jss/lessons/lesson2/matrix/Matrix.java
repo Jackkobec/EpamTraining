@@ -1,4 +1,4 @@
-package com.jss.lesson2.matrix;
+package com.jss.lessons.lesson2.matrix;
 
 import com.jss.exceptions.IncorrectMatrixException;
 
@@ -15,7 +15,7 @@ public class Matrix {
         if (n == 0 || m == 0) {
             throw new IncorrectMatrixException("Ошибка при создании матрицы. Нулевое количество строк или столбцов.");
         }
-        this.a = new int[n][m];
+        a = new int[n][m];
     }
 
     public int[][] getA() {
