@@ -120,10 +120,11 @@ public class InputNumbersOperations {
 //            for (Integer el : list) {
 //                sum += el;
 //            }
-            sum = list.stream().reduce((s1, s2) -> s1 + s2).get();
+            sum = list.stream().reduce((el1, el2) -> el1 + el2).get();
         }
         return sum / list.size();
     }
+
     /**
      * findAverageOfAllEl java 8
      *
@@ -132,8 +133,20 @@ public class InputNumbersOperations {
      */
     public double findAverageOfAllEl(List<Integer> list) {
 
-        return list.stream().collect(Collectors.averagingInt((p) -> p - 0)); //huck of the Exception in the stream
+        /**
+         * Так пишем когда не знаем, что приходит на вход, если Integer, то el -> el ничего не делаем с элементом
+         */
+        return list.stream().collect(Collectors.averagingInt(el -> el));
+        /**
+         *  Если на вход придет например лист String
+         *  return list.stream().collect(Collectors.averagingInt(el -> Integer.parseInt(el)));
+         */
 
+        /**
+         * Это вариант через
+         * return list.stream().collect(Collectors.averagingInt((p) -> p - 0)); //huck of the Exception in the stream
+         */
+        //return list.stream().collect(Collectors.averagingInt(Integer::intValue)); //huck of the Exception in the stream
         //return list.stream().mapToInt(list::get).average().getAsDouble(); //Exception IndexOutOfBoundsException
         //return list.stream().collect(Collectors.averagingInt(list::get)).doubleValue(); //Exception IndexOutOfBoundsException
     }
