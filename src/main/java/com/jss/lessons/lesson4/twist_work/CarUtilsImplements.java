@@ -1,4 +1,4 @@
-package com.jss.lessons.lwsson4.twist_work;
+package com.jss.lessons.lesson4.twist_work;
 
 import java.util.ArrayList;
 import java.util.Calendar;
