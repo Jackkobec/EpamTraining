@@ -5,8 +5,8 @@ package com.jss.lessons.lesson5;
  */
 public interface IA {
 
-    static void method() { //as default method
+    static void method() {  //as default method
 
-        System.out.println("Static in the interface");
+        System.out.println("Static method in the interface");
     }
 }

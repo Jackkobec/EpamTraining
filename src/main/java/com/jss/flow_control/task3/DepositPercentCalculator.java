@@ -136,7 +136,7 @@ public class DepositPercentCalculator {
     /**
      * IncorrectInputDataException
      */
-    public class IncorrectInputDataException extends Throwable {
+    public class IncorrectInputDataException extends Exception {
         public IncorrectInputDataException(String s) {
             super(s);
         }

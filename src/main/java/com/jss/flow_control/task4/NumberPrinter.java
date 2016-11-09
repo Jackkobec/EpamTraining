@@ -57,7 +57,7 @@ public class NumberPrinter {
         }
 
 
-    public class IncorrectCountOfLinesException extends Throwable {
+    public class IncorrectCountOfLinesException extends Exception {
         public IncorrectCountOfLinesException(String s) {
             super(s);
         }
