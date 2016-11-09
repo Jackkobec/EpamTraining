@@ -55,6 +55,13 @@ public class InputNumbersOperations {
      * @return
      */
     public int findMaxEl(List<Integer> list) {
+        if (null == list) {
+            throw new NullPointerException("Передан пустой массив.");
+        }
+        if (list.size() == 1) {
+            return list.get(0);
+        }
+
         return list.stream().max((el1, el2) -> el1.compareTo(el2)).get();
     }
 
@@ -65,6 +72,13 @@ public class InputNumbersOperations {
      * @return
      */
     public int findMinEl(List<Integer> list) {
+        if (null == list) {
+            throw new NullPointerException("Передан пустой массив.");
+        }
+        if (list.size() == 1) {
+            return list.get(0);
+        }
+
         return list.stream().min((el1, el2) -> el1.compareTo(el2)).get();
     }
 
@@ -76,6 +90,10 @@ public class InputNumbersOperations {
      */
     public int findMaxElLoop(List<Integer> list) {
         int max = 0;
+
+        if (null == list) {
+            throw new NullPointerException("Передан пустой массив.");
+        }
         if (list.size() == 1)
             return list.get(0);
         for (Integer el : list) {
@@ -94,6 +112,10 @@ public class InputNumbersOperations {
      */
     public int findMinElLoop(List<Integer> list) {
         int min;
+
+        if (null == list) {
+            throw new NullPointerException("Передан пустой массив.");
+        }
         if (list.size() == 1) {
             return list.get(0);
         }
@@ -114,6 +136,10 @@ public class InputNumbersOperations {
      */
     public double findAverageOfAllElLoop(List<Integer> list) {
         int sum = 0;
+
+        if (null == list) {
+            throw new NullPointerException("Передан пустой массив.");
+        }
         if (list.size() == 1) {
             return list.get(0);
         } else {
@@ -132,7 +158,12 @@ public class InputNumbersOperations {
      * @return
      */
     public double findAverageOfAllEl(List<Integer> list) {
-
+        if (null == list) {
+            throw new NullPointerException("Передан пустой массив.");
+        }
+        if (list.size() == 1) {
+            return list.get(0);
+        }
         /**
          * Так пишем когда не знаем, что приходит на вход, если Integer, то el -> el ничего не делаем с элементом
          */
