@@ -7,9 +7,9 @@ import java.util.List;
  */
 public interface ICarUtils {
 
-    List<Car> getCarsByBrand(String brend, List<Car> cars);
+    List<Car> getCarsByBrand(String brand, List<Car> cars);
 
-    List<Car> getCarsByModelAndTermOfUse(String brend, int termOfUse, List<Car> cars);
+    List<Car> getCarsByModelAndTermOfUse(String brand, int termOfUse, List<Car> cars);
 
     List<Car> getCarsByDateCreationAndMinPrice(int dateCreation, double minPrice, List<Car> cars);
 }
