@@ -1,4 +1,4 @@
-package com.jss.inherianse;
+package com.jss.inheritance.painting;
 
 /**
  * Created by Jack on 12.11.2016.

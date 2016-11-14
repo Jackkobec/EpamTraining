@@ -1,4 +1,4 @@
-package com.jss.inherianse;
+package com.jss.inheritance.painting;
 
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
