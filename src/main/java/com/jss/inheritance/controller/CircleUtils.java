@@ -4,7 +4,11 @@ import com.jss.inheritance.model.Circle;
 import com.jss.inheritance.model.Point;
 
 /**
- * Created by Jack on 14.11.2016.
+ * Inheritance.
+ * CircleUtils
+ *
+ * @author Evgeniy Kobec
+ *         Created by Jack on 14.11.2016.
  */
 public class CircleUtils implements ICircleUtils {
 
@@ -42,7 +46,9 @@ public class CircleUtils implements ICircleUtils {
     }
 
     @Override
-    public void setCircleSize(int Size) {
+    public void setCircleSize(Circle circle, int newSize) {
 
+        int newRadius = (int) Math.sqrt(newSize / Math.PI);
+        changeRadius(circle, newRadius);
     }
 }

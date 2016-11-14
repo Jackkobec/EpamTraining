@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.jss.inheritance.controller.CircleUtils</OriginalElement>
+  <nodes>
+    <node x="462.2903846153846" y="625.0">com.jss.inheritance.controller.ICircleUtils</node>
+    <node x="627.9634615384615" y="1527.0">com.jss.inheritance.run.Run</node>
+    <node x="662.75" y="881.0">com.jss.inheritance.view.GraphicsMain</node>
+    <node x="66.5" y="301.0">com.jss.inheritance.model.Circumference</node>
+    <node x="164.75" y="1003.0">com.jss.inheritance.model.Factory</node>
+    <node x="140.25" y="0.0">com.jss.inheritance.model.Point</node>
+    <node x="381.75" y="1248.0">com.jss.inheritance.view.ControlPanel</node>
+    <node x="782.75" y="453.33333333333326">com.jss.inheritance.model.Constants</node>
+    <node x="0.0" y="514.0">com.jss.inheritance.model.Circle</node>
+    <node x="390.75" y="992.0">com.jss.inheritance.controller.CircleUtils</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.jss.inheritance.view.ControlPanel" target="com.jss.inheritance.controller.ICircleUtils">
+      <point x="53.799999999999955" y="-114.5" />
+      <point x="570.05" y="1218.0" />
+      <point x="652.25" y="1218.0" />
+      <point x="652.25" y="856.0" />
+      <point x="650.5403846153846" y="856.0" />
+      <point x="62.75" y="47.5" />
+    </edge>
+    <edge source="com.jss.inheritance.model.Factory" target="com.jss.inheritance.model.Point">
+      <point x="51.5" y="-36.5" />
+      <point x="319.25" y="856.0" />
+      <point x="360.5" y="856.0" />
+      <point x="360.5" y="276.0" />
+      <point x="331.5" y="276.0" />
+      <point x="63.75" y="125.5" />
+    </edge>
+    <edge source="com.jss.inheritance.model.Factory" target="com.jss.inheritance.model.Circle">
+      <point x="-51.5" y="-36.5" />
+      <point x="216.25" y="856.0" />
+      <point x="175.0" y="856.0" />
+      <point x="0.0" y="158.5" />
+    </edge>
+    <edge source="com.jss.inheritance.run.Run" target="com.jss.inheritance.view.GraphicsMain">
+      <point x="38.24999999999997" y="-25.5" />
+      <point x="742.7134615384615" y="1502.0" />
+      <point x="899.0" y="1502.0" />
+      <point x="78.75" y="158.5" />
+    </edge>
+    <edge source="com.jss.inheritance.controller.CircleUtils" target="com.jss.inheritance.controller.ICircleUtils">
+      <point x="0.0" y="-47.5" />
+      <point x="516.25" y="856.0" />
+      <point x="525.0403846153846" y="856.0" />
+      <point x="-62.75" y="47.5" />
+    </edge>
+    <edge source="com.jss.inheritance.model.Circle" target="com.jss.inheritance.model.Circumference">
+      <point x="0.0" y="-158.5" />
+      <point x="0.0" y="81.5" />
+    </edge>
+    <edge source="com.jss.inheritance.view.ControlPanel" target="com.jss.inheritance.controller.CircleUtils">
+      <point x="0.0" y="-114.5" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="com.jss.inheritance.run.Run" target="com.jss.inheritance.view.ControlPanel">
+      <point x="-38.25" y="-25.5" />
+      <point x="666.2134615384615" y="1502.0" />
+      <point x="516.25" y="1502.0" />
+      <point x="0.0" y="114.5" />
+    </edge>
+    <edge source="com.jss.inheritance.view.ControlPanel" target="com.jss.inheritance.model.Factory">
+      <point x="-107.60000000000002" y="-114.5" />
+      <point x="408.65" y="1228.0" />
+      <point x="216.25" y="1228.0" />
+      <point x="-51.5" y="36.5" />
+    </edge>
+    <edge source="com.jss.inheritance.model.Circumference" target="com.jss.inheritance.model.Point">
+      <point x="0.0" y="-81.5" />
+      <point x="175.0" y="276.0" />
+      <point x="204.0" y="276.0" />
+      <point x="-63.75" y="125.5" />
+    </edge>
+    <edge source="com.jss.inheritance.view.ControlPanel" target="com.jss.inheritance.view.GraphicsMain">
+      <point x="107.60000000000002" y="-114.5" />
+      <point x="623.85" y="1228.0" />
+      <point x="741.5" y="1228.0" />
+      <point x="-78.75" y="158.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9" x="635.6666666666666" y="852.3333333333333" />
+  <SelectedNodes>
+    <node>com.jss.inheritance.model.Constants</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,7 +1,11 @@
 package com.jss.inheritance.model;
 
 /**
- * Created by Jack on 14.11.2016.
+ * Inheritance.
+ * Point
+ *
+ * @author Evgeniy Kobec
+ *         Created by Jack on 14.11.2016.
  */
 public class Point {
 

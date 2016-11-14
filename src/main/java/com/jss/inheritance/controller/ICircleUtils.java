@@ -4,7 +4,11 @@ import com.jss.inheritance.model.Circle;
 import com.jss.inheritance.model.Point;
 
 /**
- * Created by Jack on 14.11.2016.
+ * Inheritance.
+ * ICircleUtils
+ *
+ * @author Evgeniy Kobec
+ *         Created by Jack on 14.11.2016.
  */
 public interface ICircleUtils {
 
@@ -12,5 +16,5 @@ public interface ICircleUtils {
 
     boolean isPointInsideTheCircle(Circle circle, Point point);
 
-    void setCircleSize(int Size);
+    void setCircleSize(Circle circle, int newSize);
 }
