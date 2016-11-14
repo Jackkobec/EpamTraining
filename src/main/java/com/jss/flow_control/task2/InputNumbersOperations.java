@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
- * Flow_control. Task2
+ * Flow_control. Task2Nested
  *
  * @author Evgeniy Kobec
  *         Created by Jack on 03.11.2016.

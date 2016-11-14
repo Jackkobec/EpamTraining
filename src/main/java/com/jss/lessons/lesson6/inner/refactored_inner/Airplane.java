@@ -1,12 +1,17 @@
-package com.jss.lessons.lesson6.inner;
+package com.jss.lessons.lesson6.inner.refactored_inner;
 
 /**
  * Created by Jack on 09.11.2016.
  */
 
 /**
- * Task 1
- * Можно. private имеет смысл делать, если нужно сокрытие кода
+ * Create class Airplane with several engines
+ * Engined like a previos_inner classes.
+ * <p>
+ * Inner. Task1
+ *
+ * @author Evgeniy Kobec
+ *         Created by Jack on 12.11.2016.
  */
 public class Airplane {
 

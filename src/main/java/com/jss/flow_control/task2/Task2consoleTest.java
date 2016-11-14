@@ -3,7 +3,7 @@ package com.jss.flow_control.task2;
 import java.util.List;
 
 /**
- * Flow_control. Task2
+ * Flow_control. Task2Nested
  *
  * @author Evgeniy Kobec
  *         Created by Jack on 03.11.2016.

@@ -18,7 +18,7 @@ public class LocalClass {
                 System.out.println(age);  // call field from external class
             }
         }
-        //second inner class
+        //second previos_inner class
         class Local2 {
             public void print() {
                 System.out.println(secondName); //call field from external class

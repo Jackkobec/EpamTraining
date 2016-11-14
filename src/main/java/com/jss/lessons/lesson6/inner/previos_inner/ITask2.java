@@ -1,4 +1,4 @@
-package com.jss.lessons.lesson6.inner;
+package com.jss.lessons.lesson6.inner.previos_inner;
 
 /**
  * Created by Jack on 09.11.2016.

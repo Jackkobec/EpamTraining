@@ -1,15 +1,15 @@
-package com.jss.lessons.lesson6.inner;
+package com.jss.lessons.lesson6.inner.previos_inner;
 
 /**
  * Created by Jack on 09.11.2016.
- * Task2 предпочтительнее использовать внутренний клас заместо вложенного
+ * Task2Nested предпочтительнее использовать внутренний клас заместо вложенного
  */
 
 public class Task2 implements ITask2 {
 
     @Override
     public void printClassName() {
-        System.out.println("Task2");
+        System.out.println("Task2Nested");
     }
 
     //method for return instance of the createInnerTask2

@@ -1,4 +1,4 @@
-package com.jss.lessons.lesson6.inner;
+package com.jss.lessons.lesson6.inner.previos_inner;
 
 /**
  * Created by Jack on 11.11.2016.
@@ -29,7 +29,7 @@ public class External {
         new Inner().publicFieldPublicInner = "new Inner().publicFieldPublicInner";
 
         /**
-         * Access to the final static fields by name of inner class.
+         * Access to the final static fields by name of previos_inner class.
          * NameOfInner.NameOfTheField
          */
         String forShowFinalStaticField = Inner.publicFinalStaticFieldPublicInner;
