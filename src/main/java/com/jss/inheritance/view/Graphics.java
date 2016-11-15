@@ -104,7 +104,7 @@ public class Graphics extends JFrame {
         // g.drawString("0", 352, 362); //0.0  is 350 350
 
 
-        gr2d.setStroke(new BasicStroke(4));
+        gr2d.setStroke(new BasicStroke(5));
         gr2d.setPaint(Color.YELLOW.darker());
         g.drawOval(x, y, x2, y2); // x - radius , y - radius  =  position of the center x = 350 , y = 350
 

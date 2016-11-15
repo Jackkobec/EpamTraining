@@ -89,6 +89,9 @@ public class ControlPanel extends JFrame {
             int yCen = Integer.parseInt(yCenter.getText()) * 20;
             int rad = Integer.parseInt(radius.getText()) * 20;
             g = graphics.getGraphics();
+            Graphics2D gr2d = (Graphics2D) g;
+            gr2d.setStroke(new BasicStroke(3));
+            gr2d.setPaint(Color.YELLOW.darker());
             g.drawOval(xCen + 350 - rad, 350 - yCen - rad, rad * 2, rad * 2);
             graphics.paint(g);
         });
