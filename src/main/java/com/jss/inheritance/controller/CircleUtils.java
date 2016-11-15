@@ -15,6 +15,10 @@ public class CircleUtils implements ICircleUtils {
     @Override
     public void changeRadius(Circle circle, int NewRadius) {
 
+        if (null == circle || NewRadius == 0) {
+            throw new NullPointerException("Circle or Radius = null");
+        }
+
         circle.setRadius(NewRadius);
     }
 
@@ -47,6 +51,10 @@ public class CircleUtils implements ICircleUtils {
 
     @Override
     public void setCircleSize(Circle circle, int newSize) {
+
+        if (null == circle || newSize == 0) {
+            throw new NullPointerException("Circle or Size = null");
+        }
 
         int newRadius = (int) Math.sqrt(newSize / Math.PI);
         changeRadius(circle, newRadius);
