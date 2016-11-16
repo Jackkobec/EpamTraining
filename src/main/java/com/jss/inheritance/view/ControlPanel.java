@@ -50,11 +50,11 @@ public class ControlPanel extends JFrame {
 
         JPanel graphicsPanel = new JPanel(new GridLayout(0, 1));
 
-        JPanel forCenterEndRadiusPanl = new JPanel(new BorderLayout());
+        JPanel forCenterEndRadiusPanel = new JPanel(new BorderLayout());
         JLabel centerCoordinateLabel = new JLabel("Ведите координаты центра:");
         centerCoordinateLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
-        forCenterEndRadiusPanl.add(centerCoordinateLabel, BorderLayout.NORTH);
+        forCenterEndRadiusPanel.add(centerCoordinateLabel, BorderLayout.NORTH);
 
         JPanel textFieldsForCenterPoint = new JPanel(new GridLayout(0, 4));
         JLabel xLabel = new JLabel("Xc:");
@@ -70,8 +70,8 @@ public class ControlPanel extends JFrame {
         textFieldsForCenterPoint.add(yLabel);
         textFieldsForCenterPoint.add(yCenter);
 
-        forCenterEndRadiusPanl.add(textFieldsForCenterPoint, BorderLayout.CENTER);
-        graphicsPanel.add(forCenterEndRadiusPanl);
+        forCenterEndRadiusPanel.add(textFieldsForCenterPoint, BorderLayout.CENTER);
+        graphicsPanel.add(forCenterEndRadiusPanel);
 
         JPanel radiusPanel = new JPanel(new GridLayout(0, 1));
         JLabel radiusLabel = new JLabel("Ведите радиус: ");
@@ -83,8 +83,8 @@ public class ControlPanel extends JFrame {
         graphicsPanel.add(radiusPanel);
 
 
-        JButton jButton = new JButton("Нарисовать");
-        jButton.addActionListener(e -> {
+        JButton drawButton = new JButton("Нарисовать");
+        drawButton.addActionListener(e -> {
             int xCen = Integer.parseInt(xCenter.getText()) * 20;
             int yCen = Integer.parseInt(yCenter.getText()) * 20;
             int rad = Integer.parseInt(radius.getText()) * 20;
@@ -96,7 +96,7 @@ public class ControlPanel extends JFrame {
             graphics.paint(g);
         });
 
-        graphicsPanel.add(jButton);
+        graphicsPanel.add(drawButton);
 
         JPanel infoPanel = new JPanel(new BorderLayout());
         JLabel infoLabel = new JLabel("<html>Для ввода координат используйте<br>целые числа от -15 до 15,<br>для радиуса числа > 0<br>=========================</html>");
@@ -116,10 +116,13 @@ public class ControlPanel extends JFrame {
         JPanel textFieldsForPoint = new JPanel(new GridLayout(0, 4));
         JLabel xLabelPoint = new JLabel("Xp:");
         xLabelPoint.setHorizontalAlignment(SwingConstants.CENTER);
+
         JLabel yLabelPoint = new JLabel("Yp:");
         yLabelPoint.setHorizontalAlignment(SwingConstants.CENTER);
+
         JTextField xCenterPoint = new JTextField();
         JTextField yCenterPoint = new JTextField();
+
         textFieldsForPoint.add(xLabelPoint);
         textFieldsForPoint.add(xCenterPoint);
         textFieldsForPoint.add(yLabelPoint);
@@ -128,6 +131,7 @@ public class ControlPanel extends JFrame {
         JPanel pointButtonPanel = new JPanel(new BorderLayout());
         JButton drawPoint = new JButton("Нарисовать точку");
         drawPoint.addActionListener(e -> {
+
             int xCen = Integer.parseInt(xCenterPoint.getText()) * 20;
             int yCen = Integer.parseInt(yCenterPoint.getText()) * 20;
             int rad = 4;
@@ -173,6 +177,7 @@ public class ControlPanel extends JFrame {
         authorLabel.setHorizontalAlignment(SwingConstants.CENTER);
         JPanel imgPanel = new JPanel() {
             public void paint(java.awt.Graphics g) {
+
                 super.paint(g);
                 try {
                     Image img = ImageIO.read(new File("src/main/java/com/jss/inheritance/view/icons/Author.png"));
@@ -182,6 +187,7 @@ public class ControlPanel extends JFrame {
                 }
             }
         };
+
         authorPanel.add(authorLabel, BorderLayout.NORTH);
         authorPanel.add(imgPanel, BorderLayout.CENTER);
 
@@ -192,12 +198,12 @@ public class ControlPanel extends JFrame {
 
         getContentPane().add(drawOvalPanel, BorderLayout.NORTH);
         getContentPane().add(authorPanel, BorderLayout.CENTER);
-
     }
 
 
     @Override
     public void setDefaultCloseOperation(int operation) {
+
         if (operation != DO_NOTHING_ON_CLOSE &&
                 operation != HIDE_ON_CLOSE &&
                 operation != DISPOSE_ON_CLOSE &&
@@ -213,6 +219,7 @@ public class ControlPanel extends JFrame {
             }
         }
         if (this.defaultCloseOperation != operation) {
+
             int oldValue = this.defaultCloseOperation;
             this.defaultCloseOperation = operation;
             firePropertyChange("defaultCloseOperation", oldValue, operation);
@@ -221,6 +228,7 @@ public class ControlPanel extends JFrame {
 
     @Override
     protected void processWindowEvent(final WindowEvent e) {
+
         super.processWindowEvent(e);
 
         if (e.getID() == WindowEvent.WINDOW_CLOSING) {
