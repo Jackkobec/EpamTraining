@@ -1,18 +1,18 @@
 package string;
 
-import java.lang.reflect.Array;
 import java.util.*;
-import java.util.function.IntPredicate;
-import java.util.function.Predicate;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
 
 /**
- * Created by Jack on 23.11.2016.
+ * Task String. StringUtils.
+ *
+ * @author Evgeniy Kobec
+ * @Skype skypejs77
+ * @email jackkobec@gmail.com
+ * <p>
+ * Created by Jack on 22.11.2016.
  */
 public class StringUtils implements IStringUtils {
 
@@ -285,44 +285,92 @@ public class StringUtils implements IStringUtils {
         }).collect(Collectors.joining());
     }
 
+    /**
+     * countOfTheRepeatedWords
+     *
+     * @param string
+     * @return
+     */
     @Override
-    public int countOfTheRepeatedWords(String string) {
+    public Map<String, Integer> countOfTheRepeatedWords(String string) {
 
         checkStringForNullAndEmptyCondition(string);
-        String timed = string.replaceAll("\\s*", "");
+        String trimed = string.replaceAll("\\s*", "");
 
         //String pattern = "[\\s+|,\\s*]";
-        String pattern = "[,]";
+        String pattern = "[,]";//pattern for separate string in array elements
 
         //String[] strings = string.split(pattern);
+        List<String> listOfAllWords = new ArrayList<>(Arrays.asList(trimed.split(pattern)));
 
-        List<String> stringList = new ArrayList<>(Arrays.asList(timed.split(pattern)));
-        Set<String> words = new LinkedHashSet<>();
-        Map<String, Integer> wordsMap = new HashMap<>();
-        Set<String> keys = new LinkedHashSet<>();
+        Set<String> words = new LinkedHashSet<>();//set for add any word and check is it unique
+        Set<String> uniqueRepeatedWords = new LinkedHashSet<>();//set for save unique repeated words
         int count = 0;
 
-        System.out.println(stringList);
-        for (String s : stringList) {
+        System.out.println("listOfAllWords: " + listOfAllWords);
+        for (String s : listOfAllWords) {
 
             if (words.add(s)) {
 
             } else {
-                keys.add(s);
+                uniqueRepeatedWords.add(s);
                 count++;
             }
         }
 
+        System.out.println("Count of repeated words = " + (count + uniqueRepeatedWords.size()));
+        System.out.println("uniqueRepeatedWords" + uniqueRepeatedWords);
 
-        System.out.println(keys);
-        System.out.println(wordsMap);
-        System.out.println(countForEachWord(stringList, keys));
-        return count + keys.size();
+        return countRepeatsForEachWordFromList(listOfAllWords, uniqueRepeatedWords);
     }
 
-    public Map<String, Integer> countForEachWord(List<String> listOfAllWords, Set<String> uniqueRepeatedWords) {
+    /**
+     * countOfTheRepeatedWordsJava8
+     *
+     * @param string
+     * @return
+     */
+    @Override
+    public Map<String, Integer> countOfTheRepeatedWordsJava8(String string) {
 
-        Map<String, Integer> wordsWithCountMap = new HashMap<>();
+        checkStringForNullAndEmptyCondition(string);
+        String trimed = string.replaceAll("\\s*", "");
+
+        String pattern = "[,]";//pattern for separate string in array elements
+
+        List<String> listOfAllWords = new ArrayList<>(Arrays.asList(trimed.split(pattern)));
+
+        Set<String> words = new LinkedHashSet<>();
+        Set<String> uniqueRepeatedWords = new LinkedHashSet<>();
+        int[] countJ8 = {0};//use array element cause anonymous class or stream have access only to the final variables -> ins huck
+
+        System.out.println("listOfAllWords: " + listOfAllWords);
+
+        listOfAllWords.stream().forEach(str -> {
+            if (words.add(str)) {
+
+            } else {
+                uniqueRepeatedWords.add(str);
+                countJ8[0]++;
+            }
+        });
+
+        System.out.println("Count of repeated words = " + (countJ8[0] + uniqueRepeatedWords.size()));
+        System.out.println("uniqueRepeatedWords " + uniqueRepeatedWords);
+
+        return countRepeatsForEachWordFromList(listOfAllWords, uniqueRepeatedWords);
+    }
+
+    /**
+     * countRepeatsForEachWordFromList
+     *
+     * @param listOfAllWords
+     * @param uniqueRepeatedWords
+     * @return
+     */
+    public Map<String, Integer> countRepeatsForEachWordFromList(List<String> listOfAllWords, Set<String> uniqueRepeatedWords) {
+
+        Map<String, Integer> wordsWithCountMap = new LinkedHashMap<>();
 
 //        for (String key : uniqueRepeatedWords) {
 //            wordsWithCountMap.put(key, (int) listOfAllWords.stream().filter(el -> el.equals(key)).count());

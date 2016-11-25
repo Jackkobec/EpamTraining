@@ -1,10 +1,16 @@
 package string;
 
-import java.util.IntSummaryStatistics;
 import java.util.List;
+import java.util.Map;
 
 /**
- * Created by Jack on 23.11.2016.
+ * Task String. IStringUtils.
+ *
+ * @author Evgeniy Kobec
+ * @Skype skypejs77
+ * @email jackkobec@gmail.com
+ * <p>
+ * Created by Jack on 22.11.2016.
  */
 public interface IStringUtils {
 
@@ -32,7 +38,8 @@ public interface IStringUtils {
 
     String changeWordJava8(String string, String wordForChange, String newWord);
 
-    int countOfTheRepeatedWords(String string);
+    Map<String, Integer> countOfTheRepeatedWords(String string);
 
+    Map<String, Integer> countOfTheRepeatedWordsJava8(String string);
 
 }
