@@ -6,18 +6,22 @@
 
     <groupId>EpamTraining</groupId>
     <artifactId>EpamTraining</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>StringTask</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <junit.version>4.12</junit.version>
+    </properties>
+
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.2.4</version>
-        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.11</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -34,9 +38,7 @@
         </dependency>
 
     </dependencies>
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
+
 
     <build>
         <plugins>
