@@ -1,5 +1,6 @@
-package com.jss.string;
+package string;
 
+import java.util.IntSummaryStatistics;
 import java.util.List;
 
 /**
