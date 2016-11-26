@@ -54,5 +54,11 @@
             </plugin>
         </plugins>
     </build>
-
+    <developers>
+        <developer>
+            Evgeniy Kobec (Jack)
+            skype: skypejs77
+            email: jackkobec@gmail.com
+        </developer>
+    </developers>
 </project>
