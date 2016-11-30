@@ -1,3 +1,7 @@
+package tasks;
+
+import model.User;
+
 /**
  * Created by Jack on 30.11.2016.
  */
@@ -17,10 +21,10 @@ public class ExceptionsTask2 {
 
         } catch (NullPointerException e) {
 
-            System.out.println("Перехват NullPointerException в другом методе.");
+            System.out.println("Catch NullPointerException in the another method.");
         } finally {
 
-            System.out.println("Выполнение finally после перехвата исключения.");
+            System.out.println("Executing finally after exception catching.");
         }
     }
 

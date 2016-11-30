@@ -1,3 +1,5 @@
+package tasks;
+
 /**
  * Created by Jack on 30.11.2016.
  */
@@ -19,8 +21,11 @@ public class ExceptionsTask4 {
 
     public static void main(String[] args) {
 
-        //System.out.println(new ExceptionsTask4().generateStackOverFlowException(7));//call StackOverflowError
+        // call StackOverflowError
+        //System.out.println(new tasks.ExceptionsTask4().generateStackOverFlowException(7));
 
-        new ExceptionsTask4().generateOutOfMemoryError();                             //call OutOfMemoryError
+        //call OutOfMemoryError
+        new ExceptionsTask4().generateOutOfMemoryError();
+
     }
 }

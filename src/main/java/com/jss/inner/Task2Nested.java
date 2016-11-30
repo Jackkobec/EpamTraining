@@ -10,18 +10,26 @@ package com.jss.inner;
  * @author Evgeniy Kobec
  *         Created by Jack on 12.11.2016.
  */
-public class Task2Nested implements ITask2 {
+public class Task2Nested {
 
-    @Override
-    public void printClassName() {
-        System.out.println(new Task2Nested().getClass().getName());
-    }
+    private String someField = "External field";
+
 
     /**
      * Use Nested class
      */
     //Nested private class
     private static class NestedTask2 implements ITask2 {
+
+        public void callExternalFromNested(){
+
+            //call field from External class
+            System.out.println(new Task2Nested().someField);
+            //call method from External class
+            new Task2Nested().callNestedFromExternal();
+
+
+        }
 
         @Override
         public void printClassName() {
@@ -33,5 +41,15 @@ public class Task2Nested implements ITask2 {
     public ITask2 createInstanceOfTheNestedClass() {
 
         return new NestedTask2();
+    }
+
+    public void callNestedFromExternal(){
+
+        //call nested class through External
+        Task2Nested.NestedTask2 nestedTask2 = new Task2Nested.NestedTask2();
+
+        //call  method from nested class
+        nestedTask2.printClassName();
+
     }
 }

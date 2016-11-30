@@ -1,3 +1,8 @@
+package tasks;
+
+import exceptions.IncorrectUserException;
+import model.User;
+
 /**
  * Created by Jack on 30.11.2016.
  */
@@ -6,7 +11,7 @@ public class ExceptionsTask3 {
     public void methodForThrowsException(User user) throws IncorrectUserException {
 
         if (null == user) {
-            throw new IncorrectUserException("Передан неправильный user.");
+            throw new IncorrectUserException("Transmitted incorrect user.");
         }
 
         user.getName();
@@ -24,7 +29,7 @@ public class ExceptionsTask3 {
 
         } finally {
 
-            System.out.println("Выполнение finally после перехвата исключения.");
+            System.out.println("Executing finally after exception catching.");
         }
     }
 
