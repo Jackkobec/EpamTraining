@@ -22,11 +22,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="ExceptionsTask" />
         <module name="StringTask" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="EpamTraining" target="1.8" />
+      <module name="ExceptionsTask" target="1.8" />
       <module name="StringTask" target="1.8" />
     </bytecodeTargetLevel>
   </component>

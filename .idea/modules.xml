@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EpamTraining.iml" filepath="$PROJECT_DIR$/EpamTraining.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExceptionsTask/ExceptionsTask.iml" filepath="$PROJECT_DIR$/ExceptionsTask/ExceptionsTask.iml" />
       <module fileurl="file://$PROJECT_DIR$/StringTask/StringTask.iml" filepath="$PROJECT_DIR$/StringTask/StringTask.iml" />
     </modules>
   </component>
