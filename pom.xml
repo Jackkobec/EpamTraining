@@ -11,6 +11,7 @@
     <modules>
         <module>StringTask</module>
         <module>ExceptionsTask</module>
+        <module>CollectionTask</module>
     </modules>
 
     <properties>

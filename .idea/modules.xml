@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CollectionTask/CollectionTask.iml" filepath="$PROJECT_DIR$/CollectionTask/CollectionTask.iml" />
       <module fileurl="file://$PROJECT_DIR$/EpamTraining.iml" filepath="$PROJECT_DIR$/EpamTraining.iml" />
       <module fileurl="file://$PROJECT_DIR$/ExceptionsTask/ExceptionsTask.iml" filepath="$PROJECT_DIR$/ExceptionsTask/ExceptionsTask.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ExceptionsTask/ExceptionsTask.iml" filepath="$PROJECT_DIR$/ExceptionsTask/ExceptionsTask.iml" />
-      <module fileurl="file://$PROJECT_DIR$/StringTask/StringTask.iml" filepath="$PROJECT_DIR$/StringTask/StringTask.iml" />
       <module fileurl="file://$PROJECT_DIR$/StringTask/StringTask.iml" filepath="$PROJECT_DIR$/StringTask/StringTask.iml" />
     </modules>
   </component>
