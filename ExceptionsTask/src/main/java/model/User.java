@@ -1,3 +1,5 @@
+package model;
+
 /**
  * Created by Jack on 30.11.2016.
  */
@@ -38,7 +40,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "model.User{" +
                 "name='" + name + '\'' +
                 '}';
     }

@@ -10,18 +10,20 @@ package com.jss.inner;
  *         Created by Jack on 12.11.2016.
  */
 
-public class Task3Inner implements ITask2 {
+public class Task3Inner  {
 
-    @Override
-    public void printClassName() {
-        System.out.println(new Task3Inner().getClass().getName());
-    }
+    private String someField = "External field";
+
+
 
     /**
      * Use Inner class
      */
     //Inner private class
     private class InnerTask3 implements ITask2 {
+
+
+
 
         @Override
         public void printClassName() {
@@ -43,6 +45,7 @@ public class Task3Inner implements ITask2 {
                 System.out.println(new LocalClassTask3().getClass().getName());
             }
         }
+
         return new LocalClassTask3();
     }
 

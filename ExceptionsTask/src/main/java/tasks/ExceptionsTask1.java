@@ -1,3 +1,7 @@
+package tasks;
+
+import java.util.Scanner;
+
 /**
  * Created by Jack on 30.11.2016.
  */
@@ -19,7 +23,7 @@ public class ExceptionsTask1 {
 
         } catch (NullPointerException e) {
 
-            System.out.println("NullPointerException - unchecked, вызов через null - ссылку.");
+            System.out.println("NullPointerException - unchecked, call through the  null - link.");
         }
     }
 }

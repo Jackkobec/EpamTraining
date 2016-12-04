@@ -13,6 +13,7 @@ public class Task3Nested implements ITask2 {
 
     @Override
     public void printClassName() {
+
         System.out.println(new Task3Nested().getClass().getName());
     }
 
@@ -39,15 +40,18 @@ public class Task3Nested implements ITask2 {
 
             @Override
             public void printClassName() {
+
                 System.out.println(new LocalClassTask3().getClass().getName());
             }
         }
+
         return new LocalClassTask3();
     }
 
 
     //method for return instance of the createInnerTask2
     public ITask2 createInnerTask2() {
+
         return new InnerTask3();
     }
 }

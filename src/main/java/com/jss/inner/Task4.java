@@ -11,6 +11,7 @@ public class Task4 implements ITask2 {
 
     @Override
     public void printClassName() {
+
         System.out.println(new Task4().getClass().getName());
     }
 
