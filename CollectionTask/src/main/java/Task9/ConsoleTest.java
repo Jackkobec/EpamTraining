@@ -1,6 +1,12 @@
 package Task9;
 
 /**
+ * Task Collections. ConsoleTest.
+ *
+ * @author Evgeniy Kobec
+ * @Skype skypejs77
+ * @email jackkobec@gmail.com
+ * <p>
  * Created by Jack on 02.12.2016.
  */
 public class ConsoleTest {
@@ -11,10 +17,15 @@ public class ConsoleTest {
         User user2 = new User("Peta2");
         User user3 = new User("Kolya3");
 
-        ILinkedNodeUtils linkedNodeUtils = new LindedNodeUtils();
-        linkedNodeUtils.createNodeR(user, user2, user3);
+        IMyLinkedNodeUtils linkedNodeUtils = new MyMyLinkedNodeUtils();
+        MyLinkedNode<User> myLinkedNode = linkedNodeUtils.createNodeR(user, user2, user3, user2, user2, user3, user3);
+        //MyLinkedNode<User> myLinkedNode = linkedNodeUtils.createNodeR(user, user, user, user, user, user, user);
 
+        System.out.println(linkedNodeUtils.toStringMyLinkedNodeWithRecursion(myLinkedNode));
 
+        linkedNodeUtils.removeDuplicates3(myLinkedNode);
+
+        System.out.println(linkedNodeUtils.toStringMyLinkedNodeWithRecursion(myLinkedNode));
 
 
     }

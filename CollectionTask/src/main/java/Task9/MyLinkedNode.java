@@ -1,35 +1,41 @@
 package Task9;
 
 /**
+ * Task Collections. MyLinkedNode.
+ *
+ * @author Evgeniy Kobec
+ * @Skype skypejs77
+ * @email jackkobec@gmail.com
+ * <p>
  * Created by Jack on 02.12.2016.
  */
-public class LinkedNode {
+public class MyLinkedNode<E> {
 
-    private Object value;
+    private E value;
 
-    private LinkedNode next;
+    private MyLinkedNode<E> next;
 
-    public LinkedNode() {
+    public MyLinkedNode() {
     }
 
-    public LinkedNode(Object value, LinkedNode next) {
+    public MyLinkedNode(E value, MyLinkedNode<E> next) {
         this.value = value;
         this.next = next;
     }
 
-    public Object getValue() {
+    public E getValue() {
         return value;
     }
 
-    public void setValue(Object value) {
+    public void setValue(E value) {
         this.value = value;
     }
 
-    public LinkedNode getNext() {
+    public MyLinkedNode<E> getNext() {
         return next;
     }
 
-    public void setNext(LinkedNode next) {
+    public void setNext(MyLinkedNode<E> next) {
         this.next = next;
     }
 
@@ -38,7 +44,7 @@ public class LinkedNode {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        LinkedNode that = (LinkedNode) o;
+        MyLinkedNode<?> that = (MyLinkedNode<?>) o;
 
         if (value != null ? !value.equals(that.value) : that.value != null) return false;
         return next != null ? next.equals(that.next) : that.next == null;
@@ -54,7 +60,7 @@ public class LinkedNode {
 
     @Override
     public String toString() {
-        return "LinkedNode{" +
+        return "MyLinkedNode{" +
                 "value=" + value +
                 ", next=" + next +
                 '}';

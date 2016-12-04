@@ -1,6 +1,12 @@
 package Task9;
 
 /**
+ * Task Collections. User.
+ *
+ * @author Evgeniy Kobec
+ * @Skype skypejs77
+ * @email jackkobec@gmail.com
+ * <p>
  * Created by Jack on 02.12.2016.
  */
 public class User {
