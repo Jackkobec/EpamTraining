@@ -23,9 +23,11 @@ public class ConsoleTest {
 
         System.out.println(linkedNodeUtils.toStringMyLinkedNodeWithRecursion(myLinkedNode));
 
-        linkedNodeUtils.removeDuplicates3(myLinkedNode);
+        MyLinkedNode<User> myLinkedNodeAfter = linkedNodeUtils.removeDuplicates(myLinkedNode);////newHead
 
-        System.out.println(linkedNodeUtils.toStringMyLinkedNodeWithRecursion(myLinkedNode));
+        System.out.println(linkedNodeUtils.toStringMyLinkedNodeWithRecursion(myLinkedNode));//modified head
+        System.out.println(linkedNodeUtils.toStringMyLinkedNodeWithRecursion(myLinkedNodeAfter));//newHead
+
 
 
     }
