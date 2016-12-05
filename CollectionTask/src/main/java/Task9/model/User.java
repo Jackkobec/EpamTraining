@@ -1,4 +1,4 @@
-package Task9;
+package Task9.model;
 
 /**
  * Task Collections. User.

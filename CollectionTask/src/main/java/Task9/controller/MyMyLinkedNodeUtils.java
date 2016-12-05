@@ -1,4 +1,6 @@
-package Task9;
+package Task9.controller;
+
+import Task9.model.MyLinkedNode;
 
 import java.util.HashSet;
 import java.util.Hashtable;
@@ -35,8 +37,9 @@ public class MyMyLinkedNodeUtils<E> implements IMyLinkedNodeUtils<E> {
         }
 
         Set<E> filterSet = new HashSet();//Create a HashSet for search duplicates
-        //MyLinkedNode<E> newHead = null;
-        MyLinkedNode<E> newHead = head;
+
+         MyLinkedNode<E> newHead = head;
+
 
         while (null != head) {
 
@@ -48,9 +51,11 @@ public class MyMyLinkedNodeUtils<E> implements IMyLinkedNodeUtils<E> {
 
             head = head.getNext();//for next loop step
         }
-
+        System.out.println("head " + this.toStringMyLinkedNodeWithRecursion(head));
+        System.out.println("newHead " + this.toStringMyLinkedNodeWithRecursion(newHead));
         return newHead;
     }
+
 
     /**
      * removeDuplicates2 with map(Hashtable)

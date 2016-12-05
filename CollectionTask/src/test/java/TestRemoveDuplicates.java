@@ -1,7 +1,7 @@
-import Task9.IMyLinkedNodeUtils;
-import Task9.MyLinkedNode;
-import Task9.MyMyLinkedNodeUtils;
-import Task9.User;
+import Task9.controller.IMyLinkedNodeUtils;
+import Task9.model.MyLinkedNode;
+import Task9.controller.MyMyLinkedNodeUtils;
+import Task9.model.User;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

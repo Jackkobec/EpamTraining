@@ -1,4 +1,6 @@
-package Task9;
+package Task9.controller;
+
+import Task9.model.MyLinkedNode;
 
 /**
  * Task Collections. IMyLinkedNodeUtils.

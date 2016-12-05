@@ -1,4 +1,9 @@
-package Task9;
+package Task9.view;
+
+import Task9.controller.IMyLinkedNodeUtils;
+import Task9.controller.MyMyLinkedNodeUtils;
+import Task9.model.MyLinkedNode;
+import Task9.model.User;
 
 /**
  * Task Collections. ConsoleTest.
@@ -23,10 +28,10 @@ public class ConsoleTest {
 
         System.out.println(linkedNodeUtils.toStringMyLinkedNodeWithRecursion(myLinkedNode));
 
-        MyLinkedNode<User> myLinkedNodeAfter = linkedNodeUtils.removeDuplicates(myLinkedNode);////newHead
+        /*MyLinkedNode<User> myLinkedNodeAfter = */linkedNodeUtils.removeDuplicates(myLinkedNode);////newHead
 
-        System.out.println(linkedNodeUtils.toStringMyLinkedNodeWithRecursion(myLinkedNode));//modified head
-        System.out.println(linkedNodeUtils.toStringMyLinkedNodeWithRecursion(myLinkedNodeAfter));//newHead
+        System.out.println(linkedNodeUtils.toStringMyLinkedNodeWithRecursion(myLinkedNode));//modified head(myLinkedNode)
+        //System.out.println(linkedNodeUtils.toStringMyLinkedNodeWithRecursion(myLinkedNodeAfter));//newHead
 
 
 
