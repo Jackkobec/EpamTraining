@@ -20,26 +20,20 @@ public class MyMyLinkedNodeUtils<E> implements IMyLinkedNodeUtils<E> {
 
 
     /**
-     * removeDuplicates with set
+     * removeDuplicatesWithSetHelp with set
      *
      * @param head
      * @return
      */
     @Override
-    public MyLinkedNode<E> removeDuplicates(MyLinkedNode<E> head) {
+    public void removeDuplicatesWithSetHelp(MyLinkedNode<E> head) {
 
         if (null == head) {
-            return null;
-        }
-
-        if (null == head.getNext()) {
-            return head;
+            throw new NullPointerException("head = null");
         }
 
         Set<E> filterSet = new HashSet();//Create a HashSet for search duplicates
-
-         MyLinkedNode<E> newHead = head;
-
+        MyLinkedNode<E> newHead = head;
 
         while (null != head) {
 
@@ -51,27 +45,20 @@ public class MyMyLinkedNodeUtils<E> implements IMyLinkedNodeUtils<E> {
 
             head = head.getNext();//for next loop step
         }
-        System.out.println("head " + this.toStringMyLinkedNodeWithRecursion(head));
-        System.out.println("newHead " + this.toStringMyLinkedNodeWithRecursion(newHead));
-        return newHead;
     }
 
 
     /**
-     * removeDuplicates2 with map(Hashtable)
+     * removeDuplicatesWithMapHelp with map(Hashtable)
      *
      * @param head
      * @return
      */
     @Override
-    public MyLinkedNode<E> removeDuplicates2(MyLinkedNode<E> head) {
+    public void removeDuplicatesWithMapHelp(MyLinkedNode<E> head) {
 
         if (null == head) {
-            return null;
-        }
-
-        if (null == head.getNext()) {
-            return head;
+            throw new NullPointerException("head = null");
         }
 
         Map<E, Boolean> myHashTable = new Hashtable();//Create a HashTable for search duplicates
@@ -88,25 +75,19 @@ public class MyMyLinkedNodeUtils<E> implements IMyLinkedNodeUtils<E> {
 
             head = head.getNext();//for next loop step
         }
-
-        return newHead;
     }
 
     /**
-     * removeDuplicates3 with 2 loops
+     * removeDuplicatesWith2Loops with 2 loops
      *
      * @param head
      * @return
      */
     @Override
-    public MyLinkedNode<E> removeDuplicates3(MyLinkedNode<E> head) {
+    public void removeDuplicatesWith2Loops(MyLinkedNode<E> head) {
 
         if (null == head) {
-            return null;
-        }
-
-        if (null == head.getNext()) {
-            return head;
+            throw new NullPointerException("head = null");
         }
 
         MyLinkedNode<E> current = head;
@@ -125,9 +106,6 @@ public class MyMyLinkedNodeUtils<E> implements IMyLinkedNodeUtils<E> {
 
             current = current.getNext();
         }
-
-
-        return current;
     }
 
     /**

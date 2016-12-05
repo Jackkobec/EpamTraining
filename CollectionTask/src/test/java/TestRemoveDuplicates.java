@@ -1,10 +1,12 @@
 import Task9.controller.IMyLinkedNodeUtils;
-import Task9.model.MyLinkedNode;
 import Task9.controller.MyMyLinkedNodeUtils;
+import Task9.model.MyLinkedNode;
 import Task9.model.User;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 /**
  * Task Collections. TestRemoveDuplicates.
@@ -32,39 +34,53 @@ public class TestRemoveDuplicates {
         User user2 = new User("Peta2");
         User user3 = new User("Kolya3");
 
-        MyLinkedNode<User> expected = iMyLinkedNodeUtils.createNodeR(user, user2, user3);
-        MyLinkedNode<User> expectedOne = iMyLinkedNodeUtils.createNodeR(user);
+        expected = iMyLinkedNodeUtils.createNodeR(user, user2, user3);
+        expectedOne = iMyLinkedNodeUtils.createNodeR(user);
 
-        MyLinkedNode<User> nodeWithDuplicates = iMyLinkedNodeUtils.createNodeR(user, user2, user3, user, user2, user3, user, user2);
-        MyLinkedNode<User> nodeWithDuplicatesOneEl = iMyLinkedNodeUtils.createNodeR(user, user, user, user, user, user, user);
+        nodeWithDuplicates = iMyLinkedNodeUtils.createNodeR(user, user2, user3, user, user2, user3, user, user2);
+        nodeWithDuplicatesOneEl = iMyLinkedNodeUtils.createNodeR(user, user, user, user, user, user, user);
     }
 
     @Test
     public void testRemoveDuplicates() {
 
-        Assert.assertEquals(expected, iMyLinkedNodeUtils.removeDuplicates(nodeWithDuplicates));
-        Assert.assertEquals(expectedOne, iMyLinkedNodeUtils.removeDuplicates(nodeWithDuplicatesOneEl));
+        iMyLinkedNodeUtils.removeDuplicatesWithSetHelp(nodeWithDuplicates);
+        iMyLinkedNodeUtils.removeDuplicatesWithSetHelp(nodeWithDuplicatesOneEl);
+
+        Assert.assertEquals(expected, nodeWithDuplicates);
+        Assert.assertEquals(expectedOne, nodeWithDuplicatesOneEl);
     }
 
     @Test
     public void testRemoveDuplicates2() {
 
-        Assert.assertEquals(expected, iMyLinkedNodeUtils.removeDuplicates2(nodeWithDuplicates));
-        Assert.assertEquals(expectedOne, iMyLinkedNodeUtils.removeDuplicates2(nodeWithDuplicatesOneEl));
+        iMyLinkedNodeUtils.removeDuplicatesWithMapHelp(nodeWithDuplicates);
+        iMyLinkedNodeUtils.removeDuplicatesWithMapHelp(nodeWithDuplicatesOneEl);
+
+        Assert.assertEquals(expected, nodeWithDuplicates);
+        Assert.assertEquals(expectedOne, nodeWithDuplicatesOneEl);
     }
 
     @Test
     public void testRemoveDuplicates3() {
 
-        Assert.assertEquals(expected, iMyLinkedNodeUtils.removeDuplicates3(nodeWithDuplicates));
-        Assert.assertEquals(expectedOne, iMyLinkedNodeUtils.removeDuplicates3(nodeWithDuplicatesOneEl));
+        iMyLinkedNodeUtils.removeDuplicatesWith2Loops(nodeWithDuplicates);
+        iMyLinkedNodeUtils.removeDuplicatesWith2Loops(nodeWithDuplicatesOneEl);
+
+        Assert.assertEquals(expected, nodeWithDuplicates);
+        Assert.assertEquals(expectedOne, nodeWithDuplicatesOneEl);
     }
 
-    @Test
+    @Rule
+    public ExpectedException expectedException = ExpectedException.none();
+    @Test()
     public void testForNullInput() {
 
-        Assert.assertEquals(null, iMyLinkedNodeUtils.removeDuplicates(null));
-        Assert.assertEquals(null, iMyLinkedNodeUtils.removeDuplicates2(null));
-        Assert.assertEquals(null, iMyLinkedNodeUtils.removeDuplicates3(null));
+        expectedException.expect(NullPointerException.class);
+        expectedException.expectMessage("head = null");
+
+        iMyLinkedNodeUtils.removeDuplicatesWithSetHelp(null);
+        iMyLinkedNodeUtils.removeDuplicatesWithMapHelp(null);
+        iMyLinkedNodeUtils.removeDuplicatesWith2Loops(null);
     }
 }

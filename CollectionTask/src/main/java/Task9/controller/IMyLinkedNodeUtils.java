@@ -13,11 +13,11 @@ import Task9.model.MyLinkedNode;
  */
 public interface IMyLinkedNodeUtils<E> {
 
-    MyLinkedNode<E> removeDuplicates (MyLinkedNode<E> head);
+    void removeDuplicatesWithSetHelp(MyLinkedNode<E> head);
 
-    MyLinkedNode<E> removeDuplicates2 (MyLinkedNode<E> head);
+    void removeDuplicatesWithMapHelp(MyLinkedNode<E> head);
 
-    MyLinkedNode<E> removeDuplicates3 (MyLinkedNode<E> head);
+    void removeDuplicatesWith2Loops(MyLinkedNode<E> head);
 
     MyLinkedNode<E> createNodeR(E... elements);
 
