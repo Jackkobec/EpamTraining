@@ -33,14 +33,14 @@ public class MyMyLinkedNodeUtils<E> implements IMyLinkedNodeUtils<E> {
         }
 
         Set<E> filterSet = new HashSet();//Create a HashSet for search duplicates
-        MyLinkedNode<E> newHead = head;
+        MyLinkedNode<E> previous = head;
 
         while (null != head) {
 
             if (filterSet.add(head.getValue())) {//if current add to set - it is unique
-                newHead = head;
+                previous = head;
             } else {
-                newHead.setNext(head.getNext());//if don't add to set - it is a duplicate and we jump it with setNext(head.getNext()
+                previous.setNext(head.getNext());//if don't add to set - it is a duplicate and we jump it with setNext(head.getNext()
             }
 
             head = head.getNext();//for next loop step
@@ -62,15 +62,15 @@ public class MyMyLinkedNodeUtils<E> implements IMyLinkedNodeUtils<E> {
         }
 
         Map<E, Boolean> myHashTable = new Hashtable();//Create a HashTable for search duplicates
-        MyLinkedNode<E> newHead = null;
+        MyLinkedNode<E> previous = null;
 
         while (null != head) {
 
             if (myHashTable.containsKey(head.getValue())) {
-                newHead.setNext(head.getNext());
+                previous.setNext(head.getNext());
             } else {
                 myHashTable.put(head.getValue(), true);
-                newHead = head;
+                previous = head;
             }
 
             head = head.getNext();//for next loop step
