@@ -41,16 +41,22 @@ public class StringUtils implements IStringUtils {
      * @return
      */
     private boolean checkStringForNullAndEmptyConditionJava8(String... args) {
-
-        Arrays.stream(args)
-               /*can be map*/.filter(str -> {
+        //Incorrect
+        /*Arrays.stream(args)
+               *//*can be map*//*.filter(str -> {
             if (str == null || str.isEmpty()) {
                 throw new NullPointerException("Передано Null значение или пустая строка.");
             }
             return true;
-        });
+        });*/
 
-        return false;
+        /**Correct*/
+        return Arrays.stream(args)
+               /*can be map*/.allMatch(str -> {
+                    if (str == null || str.isEmpty()) {
+                        throw new NullPointerException("Передано Null значение или пустая строка.");
+                    } else return true;
+                });
     }
 
     /**
@@ -60,11 +66,18 @@ public class StringUtils implements IStringUtils {
      * @return
      */
     private boolean checkStringForNullAndEmptyConditionJava8Alt(String... args) {
+        //Incorrect
+        /*Arrays.stream(args)
+                .map(str -> (str == null || str.isEmpty()) ? new NullPointerException("Передано Null значение или пустая строка.") : true);*/
 
-        Arrays.stream(args)
-                .map(str -> (str == null || str.isEmpty()) ? new NullPointerException("Передано Null значение или пустая строка.") : true);
+        /**Correct*/
+        if (args == null || args.length == 0) {
+            throw new NullPointerException("Передано null значение или args.length == 0.");
+        }
 
-        return false;
+        /**Correct*/
+        return Arrays.stream(args)
+                .anyMatch(str -> (str == null || str.isEmpty()) ? false : true);
     }
 
     /**
